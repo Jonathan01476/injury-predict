@@ -1,0 +1,4 @@
+* text=auto
+data/*.csv -text
+*.joblib binary
+*.png binary

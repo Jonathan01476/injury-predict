@@ -1,0 +1,41 @@
+{
+  "/health": {
+    "status": 200
+  },
+  "/pipeline": {
+    "status": 200
+  },
+  "/docs": {
+    "status": 200
+  },
+  "valid": {
+    "status": 200,
+    "body": {
+      "prediction": 0,
+      "label": "No injury label",
+      "injury_probability": 0.474796461867516,
+      "target": "Likelihood_of_Injury",
+      "model": "LogisticRegression",
+      "built_at": "2026-09-16T13:38:59.326754+00:00"
+    }
+  },
+  "invalid": {
+    "status": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "less_than_equal",
+          "loc": [
+            "body",
+            "Player_Age"
+          ],
+          "msg": "Input should be less than or equal to 39",
+          "input": 99,
+          "ctx": {
+            "le": 39
+          }
+        }
+      ]
+    }
+  }
+}

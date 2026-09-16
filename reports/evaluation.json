@@ -1,0 +1,82 @@
+{
+  "steps": [
+    {
+      "name": "injury_features",
+      "class": "InjuryFeatureEngineer"
+    },
+    {
+      "name": "scale",
+      "class": "StandardScaler"
+    },
+    {
+      "name": "classifier",
+      "class": "LogisticRegression"
+    }
+  ],
+  "built_at": "2026-09-16T13:38:59.326754+00:00",
+  "sklearn_version": "1.7.2",
+  "expected_input_features": [
+    "Player_Age",
+    "Player_Weight",
+    "Player_Height",
+    "Previous_Injuries",
+    "Training_Intensity",
+    "Recovery_Time"
+  ],
+  "target": "Likelihood_of_Injury",
+  "classes": {
+    "0": "No injury label",
+    "1": "Injury label"
+  },
+  "metrics": {
+    "accuracy": 0.525,
+    "precision": 0.5185185185185185,
+    "recall": 0.7,
+    "f1": 0.5957446808510638,
+    "roc_auc": 0.5429999999999999,
+    "confusion_matrix": [
+      [
+        35,
+        65
+      ],
+      [
+        30,
+        70
+      ]
+    ],
+    "baseline_accuracy": 0.5,
+    "train_cv_roc_auc_mean": 0.48065625,
+    "train_cv_roc_auc_std": 0.027985487310390012
+  },
+  "rows": 1000,
+  "training_rows": 800,
+  "test_rows": 200,
+  "random_state": 42,
+  "dataset_sha256": "cc091b4398465db5645fb6134657b2557e6ff584aa78ecd137a3875a0476f7d1",
+  "feature_ranges": {
+    "Player_Age": {
+      "min": 18.0,
+      "max": 39.0
+    },
+    "Player_Weight": {
+      "min": 40.19191171239916,
+      "max": 104.6501035172072
+    },
+    "Player_Height": {
+      "min": 145.28570108061618,
+      "max": 207.3086723322357
+    },
+    "Previous_Injuries": {
+      "min": 0.0,
+      "max": 1.0
+    },
+    "Training_Intensity": {
+      "min": 3.071884538241587e-05,
+      "max": 0.9977493890102006
+    },
+    "Recovery_Time": {
+      "min": 1.0,
+      "max": 6.0
+    }
+  }
+}
