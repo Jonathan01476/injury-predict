@@ -1,4 +1,4 @@
-"""Verify real cloud endpoints and record submission URLs after deployment."""
+﻿"""Verify real cloud endpoints and record submission URLs after deployment."""
 import argparse
 import json
 from pathlib import Path
@@ -38,11 +38,11 @@ def verify(api_url, vercel_url):
     collection['variable'][0]['value'] = api_url
     collection_path.write_text(json.dumps(collection,indent=2))
     readme_path = ROOT/'README.md'
-    readme = readme_path.read_text()
+    readme = readme_path.read_text(encoding='utf-8')
     readme = readme.replace('Modal API URL: **Pending authenticated deployment**',f'Modal API URL: {api_url}')
     readme = readme.replace('API Docs URL: **Pending — Modal API URL + /docs**',f'API Docs URL: {api_url}/docs')
     readme = readme.replace('Vercel URL: **Pending authenticated deployment**',f'Vercel URL: {vercel_url}')
-    readme_path.write_text(readme)
+    readme_path.write_text(readme,encoding='utf-8')
     print(json.dumps(report,indent=2))
 
 if __name__ == '__main__':

@@ -98,11 +98,11 @@ Frontend is React/Vite; its public environment variable is **VITE_API_URL** (the
 
 ## Submission and Postman
 
-Modal API URL: **Pending authenticated deployment**
+Modal API URL: https://jonathan01476--injury-predict-api.modal.run
 
-API Docs URL: **Pending — Modal API URL + /docs**
+API Docs URL: https://jonathan01476--injury-predict-api.modal.run/docs
 
-Vercel URL: **Pending authenticated deployment**
+Vercel URL: https://frontend-mu-six-16.vercel.app
 
 Import `postman/collection.json` in Postman. Set collection variable `base_url` to the deployed Modal URL, without trailing slash. Run all four requests or use Collection Runner. The health and metadata requests assert 200; valid prediction asserts 200 and actual prediction/probability fields; invalid prediction asserts 422 and validation details. No screenshot or cloud-testing result is claimed until performed.
 
